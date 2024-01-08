@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 interface Props {
   isStartLoading: boolean
 }
@@ -8,10 +7,15 @@ const { isStartLoading } = defineProps<Props>()
 </script>
 
 <template>
-  <div class="fixed inset-0 w-full h-full bg-white z-50 flex justify-center items-center duration-500" :class="{'top-full duration-500': !isStartLoading}">
+  <div
+    class="fixed inset-0 w-full h-full bg-white z-50 flex justify-center items-center duration-500"
+    :class="{ 'top-full duration-500': !isStartLoading }"
+  >
     <div class="grid gap-3">
       <span class="loader"></span>
-      <h1 class="text-4xl font-medium text-gray-800">Weather <span class="text-red-500">App</span></h1>
+      <h1 class="text-4xl font-medium text-gray-800">
+        Weather <span class="text-red-500">App</span>
+      </h1>
     </div>
   </div>
 </template>
@@ -51,7 +55,7 @@ const { isStartLoading } = defineProps<Props>()
   width: 24px;
   height: 4px;
   border-radius: 50%;
-//background: rgba(0, 0, 0, 0.2);
+  //background: rgba(0, 0, 0, 0.2);
   animation: animShadow 0.4s ease-in-out infinite alternate;
 }
 

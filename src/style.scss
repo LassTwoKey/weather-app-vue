@@ -4,14 +4,16 @@
 
 $primary: rgb(239 68 68);
 
-input, textarea {
+input,
+textarea {
   outline: none;
 }
-html, body {
+html,
+body {
   height: 100%;
 }
 body {
-  background: #ECEEF2;
+  background: #eceef2;
 }
 #app {
   height: 100%;
@@ -24,37 +26,38 @@ body {
   @apply rounded-lg;
 }
 
-
-
-
-
-
-
-
 .loader-dot {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   display: block;
-  margin:15px auto;
+  margin: 15px auto;
   position: relative;
-  background: #FFF;
-  box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+  background: #fff;
+  box-shadow:
+    -24px 0 #fff,
+    24px 0 #fff;
   box-sizing: border-box;
   animation: shadowPulse 1s linear infinite;
 }
 
 @keyframes shadowPulse {
   33% {
-    background: #FFF;
-    box-shadow: -24px 0 $primary, 24px 0 #FFF;
+    background: #fff;
+    box-shadow:
+      -24px 0 $primary,
+      24px 0 #fff;
   }
   66% {
     background: $primary;
-    box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+    box-shadow:
+      -24px 0 #fff,
+      24px 0 #fff;
   }
   100% {
-    background: #FFF;
-    box-shadow: -24px 0 #FFF, 24px 0 $primary;
+    background: #fff;
+    box-shadow:
+      -24px 0 #fff,
+      24px 0 $primary;
   }
 }

@@ -4,63 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7354bdb-1b64-4541-933a-ee51c717b7c5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/arrow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/close.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/github.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/widget/Ash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/widget/Clear.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/widget/Clouds.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/widget/Drizzle.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/widget/Dust.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/widget/Fog.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/widget/Haze.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/widget/Mist.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/widget/Rain.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/widget/Sand.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/widget/Smoke.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/widget/Snow.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/widget/Squall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/widget/Thunderstorm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/widget/Tornado.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/widget/sample.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AppLoader.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Footer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/InputSearch.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SwiperComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Card.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/NamedCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Spoiler.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/WeatherCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Widget.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/inputSearch.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tabs/FiveDays.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tabs/Tabs.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tabs/Today.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tabs/Tomorrow.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/tabs/tabs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/widget.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/directive/ClickOutsideDirective.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/date.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/debounce.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/getCountry.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/localStorage.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/misc.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/weatherData.ts" afterDir="false" />
+    <list default="true" id="d7354bdb-1b64-4541-933a-ee51c717b7c5" name="Changes" comment="chore: add prettier">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/vue.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppLoader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppLoader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InputSearch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InputSearch.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SwiperComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SwiperComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Card.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/NamedCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/NamedCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Spoiler.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Spoiler.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/WeatherCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/WeatherCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Widget.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Widget.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/inputSearch.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputSearch.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tabs/FiveDays.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs/FiveDays.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tabs/Tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs/Tabs.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tabs/Today.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs/Today.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tabs/Tomorrow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs/Tomorrow.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tabs/tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs/tabs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/widget.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/widget.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/directive/ClickOutsideDirective.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/directive/ClickOutsideDirective.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/date.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/date.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/debounce.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/debounce.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/getCountry.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getCountry.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/localStorage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/localStorage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/misc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/misc.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/weatherData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/weatherData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vite-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/vite-env.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.node.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.node.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +71,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "LassTwoKey"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -161,8 +155,17 @@
       <workItem from="1704390043217" duration="2184000" />
       <workItem from="1704458849572" duration="7849000" />
       <workItem from="1704715786259" duration="7304000" />
-      <workItem from="1704723191407" duration="8858000" />
+      <workItem from="1704723191407" duration="9208000" />
     </task>
+    <task id="LOCAL-00001" summary="chore: add prettier">
+      <option name="closed" value="true" />
+      <created>1704732343116</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704732343116</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,5 +181,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chore: add prettier" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add prettier" />
   </component>
 </project>

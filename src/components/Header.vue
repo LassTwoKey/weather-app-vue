@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { ref } from "vue"
-import InputSearch from "./InputSearch.vue";
-import { debounce, setUnit, setGeo } from "../utils";
-import { getCitiesByValue, getFullInfoByCities } from "../api";
-import { City, WeatherInfo } from "../types";
-import { getCountryByCode } from "../utils/getCountry";
-import { useGeoStore, useUnitStore } from "../store/store";
-import {setForecast, setWeather} from "../utils/weatherData";
+import { ref } from 'vue'
+import InputSearch from './InputSearch.vue'
+import { debounce, setUnit, setGeo } from '../utils'
+import { getCitiesByValue, getFullInfoByCities } from '../api'
+import { City, WeatherInfo } from '../types'
+import { getCountryByCode } from '../utils/getCountry'
+import { useGeoStore, useUnitStore } from '../store/store'
+import { setForecast, setWeather } from '../utils/weatherData'
 
 const citiesList = ref<City[]>([])
 const isLoading = ref<boolean>(false)
@@ -27,10 +27,12 @@ const setUnitHandler = (unit: 'metric' | 'imperial') => {
 const performSearch = async (word: string) => {
   let cities = await getCitiesByValue(word)
   if (Array.isArray(cities)) {
-    const recvData: WeatherInfo[] | void = await getFullInfoByCities(cities.map(city => ({
-      lat: city.lat,
-      lon: city.lon
-    })))
+    const recvData: WeatherInfo[] | void = await getFullInfoByCities(
+      cities.map((city) => ({
+        lat: city.lat,
+        lon: city.lon,
+      }))
+    )
 
     if (recvData?.length) {
       citiesList.value = recvData.map((city, idx) => ({
@@ -52,22 +54,22 @@ const performSearch = async (word: string) => {
       isLoading.value = false
     }
   }
-};
-const debouncedSearch: (arg: string) => void = debounce(performSearch, 500);
-const handleSearch = (word:string, isMobile: boolean) => {
+}
+const debouncedSearch: (arg: string) => void = debounce(performSearch, 500)
+const handleSearch = (word: string, isMobile: boolean) => {
   if (word.trim()) {
     if (isMobile) searchListOpenMobile.value = true
     else searchListOpen.value = true
 
     isLoading.value = true
-    debouncedSearch(word);
+    debouncedSearch(word)
   } else {
     if (isMobile) searchListOpenMobile.value = false
     else searchListOpen.value = false
 
     isLoading.value = false
   }
-};
+}
 const handleClose = (isMobile: boolean) => {
   resultString.value = ''
   citiesList.value = []
@@ -76,7 +78,7 @@ const handleClose = (isMobile: boolean) => {
   if (isMobile) searchListOpenMobile.value = false
   else searchListOpen.value = false
 }
-const selectCityHandler = (city:City) => {
+const selectCityHandler = (city: City) => {
   const geo = {
     name: city.name,
     lat: city.lat,
@@ -92,7 +94,6 @@ const selectCityHandler = (city:City) => {
   handleClose(true)
   handleClose(false)
 }
-
 </script>
 
 <template>
@@ -100,41 +101,48 @@ const selectCityHandler = (city:City) => {
     <div class="app-container header__container">
       <div class="header__left">
         <div class="header__left_logo">
-          <img src="../assets/logo.svg" alt="Logo">
+          <img src="../assets/logo.svg" alt="Logo" />
           <p>Weather <span class="text-red-500">App</span></p>
         </div>
         <div class="header__left_mobile-search">
-          <button class="header__left_mobile-search_btn app-rounded" @click="searchListOpenMobile = true">
-            <img src="../assets/search.svg" alt="Search">
+          <button
+            class="header__left_mobile-search_btn app-rounded"
+            @click="searchListOpenMobile = true"
+          >
+            <img src="../assets/search.svg" alt="Search" />
           </button>
           <InputSearch
-              :isMobile="true"
-              @handle-search="handleSearch"
-              @handle-close="handleClose"
-              @handle-select="selectCityHandler"
-              :isLoading="isLoading"
-              :resultString="resultString"
-              :isOpenMobile="searchListOpenMobile"
-              :isError="isError"
-              :cities-list="citiesList"
-          />
-        </div>
-      </div>
-      <div class="header__center">
-        <InputSearch
+            :isMobile="true"
             @handle-search="handleSearch"
             @handle-close="handleClose"
             @handle-select="selectCityHandler"
             :isLoading="isLoading"
             :resultString="resultString"
-            :isOpen="searchListOpen"
+            :isOpenMobile="searchListOpenMobile"
             :isError="isError"
             :cities-list="citiesList"
+          />
+        </div>
+      </div>
+      <div class="header__center">
+        <InputSearch
+          @handle-search="handleSearch"
+          @handle-close="handleClose"
+          @handle-select="selectCityHandler"
+          :isLoading="isLoading"
+          :resultString="resultString"
+          :isOpen="searchListOpen"
+          :isError="isError"
+          :cities-list="citiesList"
         />
       </div>
       <div class="header__right">
         <div class="header__right_buttons toggle-buttons app-rounded">
-          <button class="app-rounded" :class="{active: unitStore.getUnit === 'metric'}" @click="setUnitHandler('metric')">
+          <button
+            class="app-rounded"
+            :class="{ active: unitStore.getUnit === 'metric' }"
+            @click="setUnitHandler('metric')"
+          >
             <span class="text">°C</span>
             <span class="app-rounded active-btn"></span>
           </button>
@@ -147,6 +155,6 @@ const selectCityHandler = (city:City) => {
   </header>
 </template>
 
-<style lang="scss" >
-    @import "./header.scss";
+<style lang="scss">
+@import './header.scss';
 </style>

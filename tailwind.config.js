@@ -1,10 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: 'class',
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {},
     container: {
@@ -14,8 +11,7 @@ export default {
     },
     letterSpacing: {
       wide: '.015em',
-    }
+    },
   },
   plugins: [],
-} 
-
+}
