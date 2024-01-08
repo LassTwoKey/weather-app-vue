@@ -1,0 +1,16 @@
+.tabs-wrapper {
+  @apply w-full;
+}
+
+.tabs {
+  @apply overflow-hidden py-4 md:py-8 flex gap-4 md:gap-8;
+  button {
+    @apply bg-white py-2 font-medium text-gray-800 flex-auto shadow-sm shadow-red-400/50;
+    &.active {
+      @apply from-red-400 bg-purple-500 bg-gradient-to-b text-white;
+    }
+  }
+  &__content {
+
+  }
+}

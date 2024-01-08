@@ -1,0 +1,42 @@
+.search {
+  @apply relative;
+
+  &__field {
+    @apply bg-gray-200 outline-none flex items-center overflow-hidden;
+    input {
+      @apply bg-gray-200 pl-3 py-1.5 text-sm text-gray-500 tracking-wide min-w-0 md:min-w-96 w-full;
+    }
+    &_btn {
+      @apply bg-gray-200 pl-2.5 pr-3 w-9 h-8;
+    }
+  }
+
+  &__list {
+    @apply absolute w-full bg-white top-full z-20 rounded-b-md overflow-hidden;
+  }
+  &__item {
+    button {
+      @apply w-full flex items-center justify-between px-3 hover:bg-red-400 hover:text-white duration-200;
+      img {
+        @apply w-10;
+      }
+    }
+    &_info {
+      @apply flex items-center gap-3 text-left flex-auto justify-between;
+      span:last-child {
+        @apply text-nowrap;
+      }
+    }
+  }
+
+  &__loader {
+    @apply py-8;
+  }
+}
+
+.search-wrapper-mobile {
+  @apply z-30 fixed inset-0 w-full h-full bg-white top-full duration-300 py-3;
+}
+.show-mobile-search {
+  @apply top-0;
+}

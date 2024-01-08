@@ -1,0 +1,45 @@
+.header {
+    @apply py-2 flex items-center bg-white;
+    &__container {
+        @apply flex gap-4 h-full justify-between items-center;
+    }
+    &__left {
+        @apply flex gap-2 items-center;
+        &_logo {
+            @apply flex items-center gap-2 text-2xl text-gray-800 font-bold;
+        }
+        &_mobile-search {
+            @apply md:hidden;
+            &_btn {
+                @apply w-8 h-8 inline-flex items-center justify-center;
+                img {
+                    @apply translate-y-0.5
+                }
+            }
+        }
+    }
+    &__center {
+        @apply hidden md:flex;
+    }
+    &__right {
+        &_buttons {
+            @apply p-0.5 bg-gray-200 flex;
+            button {
+                @apply h-7 w-7 flex items-center justify-center font-medium text-gray-500 relative;
+                span {
+                    &.text {
+                        @apply relative z-10;
+                    }
+                    &.active-btn {
+                        @apply absolute inset-0 w-full h-full bg-white left-full transition-all ease-out duration-200;
+                    }
+                }
+                &.active {
+                    span.active-btn {
+                        @apply left-0 transition-all ease-out duration-200 overflow-hidden rounded-md;
+                    }
+                }
+            }
+        }
+    }
+}
