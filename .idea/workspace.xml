@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d7354bdb-1b64-4541-933a-ee51c717b7c5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/github.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/widget/Ash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/widget/Clear.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/widget/Clouds.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/widget/Drizzle.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/widget/Dust.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/widget/Fog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/widget/Haze.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/widget/Mist.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/widget/Rain.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/widget/Sand.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/widget/Smoke.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/widget/Snow.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/widget/Squall.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/widget/Thunderstorm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/widget/Tornado.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/widget/sample.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppLoader.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/InputSearch.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SwiperComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Card.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/NamedCard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Spoiler.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/WeatherCard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Widget.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/inputSearch.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tabs/FiveDays.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tabs/Tabs.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tabs/Today.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tabs/Tomorrow.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tabs/tabs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/widget.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/directive/ClickOutsideDirective.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/date.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/debounce.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/getCountry.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/localStorage.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/misc.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/weatherData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/vue.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="Vue Composition API Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2fce90b1-68a6-41f8-a5d2-6cefad98a796" />
+        <option name="url" value="https://github.com/LassTwoKey/weather-app-vue.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2aDeEnqESNDARsdWyPwbCCDcGJy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/dimas/Desktop/weaher-app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\Users\\dimas\\Desktop\\weaher-app\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "vue.recent.templates": [
+      "Vue Composition API Component"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dimas\Desktop\weaher-app\src\components\UI" />
+      <recent name="C:\Users\dimas\Desktop\weaher-app\src\assets" />
+      <recent name="C:\Users\dimas\Desktop\weaher-app\src\components\tabs" />
+      <recent name="C:\Users\dimas\Desktop\weaher-app\src\assets\widget" />
+      <recent name="C:\Users\dimas\Desktop\weaher-app\src\types" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="js.build_tools.npm" />
+      </set>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d7354bdb-1b64-4541-933a-ee51c717b7c5" name="Changes" comment="" />
+      <created>1703857467272</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703857467272</updated>
+      <workItem from="1703857468272" duration="13565000" />
+      <workItem from="1703929969946" duration="10893000" />
+      <workItem from="1704195767344" duration="18165000" />
+      <workItem from="1704311774134" duration="4670000" />
+      <workItem from="1704316514382" duration="876000" />
+      <workItem from="1704317408824" duration="14490000" />
+      <workItem from="1704375388010" duration="14455000" />
+      <workItem from="1704390043217" duration="2184000" />
+      <workItem from="1704458849572" duration="7849000" />
+      <workItem from="1704715786259" duration="7304000" />
+      <workItem from="1704723191407" duration="8858000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
