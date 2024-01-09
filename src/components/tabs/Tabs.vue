@@ -41,7 +41,7 @@ const computedContent = computed(() =>
       </button>
     </div>
     <div class="tabs__content">
-      <component :is="computedContent.component"></component>
+      <component v-if="computedContent?.component" :is="computedContent.component"></component>
     </div>
   </div>
 </template>

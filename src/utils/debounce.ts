@@ -1,9 +1,9 @@
 export function debounce(func: (...arg: any[]) => any, delay: number) {
   let timeoutId: number
 
-  return function () {
+  return function (this: any) {
     const context = this
-    const args = arguments
+    const args = Array.from(arguments)
 
     clearTimeout(timeoutId)
     timeoutId = setTimeout(function () {
