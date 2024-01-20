@@ -17,60 +17,6 @@ import {
 } from './misc.ts'
 import { formatTime, formatUnixTimeTo24HourTimeString } from './date.ts'
 
-import sampleIcon from '@/assets/widget/sample.svg'
-import AshIcon from '@/assets/widget/Ash.jpg'
-import ClearIcon from '@/assets/widget/Clear.jpg'
-import CloudsIcon from '@/assets/widget/Clouds.jpg'
-import DrizzleIcon from '@/assets/widget/Drizzle.jpg'
-import DustIcon from '@/assets/widget/Dust.jpg'
-import FogIcon from '@/assets/widget/Fog.jpg'
-import HazeIcon from '@/assets/widget/Haze.jpg'
-import MistIcon from '@/assets/widget/Mist.jpg'
-import RainIcon from '@/assets/widget/Rain.jpg'
-import SandIcon from '@/assets/widget/Sand.jpg'
-import SmokeIcon from '@/assets/widget/Smoke.jpg'
-import SnowIcon from '@/assets/widget/Snow.jpg'
-import SquallIcon from '@/assets/widget/Squall.jpg'
-import ThunderstormIcon from '@/assets/widget/Thunderstorm.jpg'
-import TornadoIcon from '@/assets/widget/Tornado.jpg'
-
-
-export const getWidgetBackgroundUrl = (imageName: string) => {
-  switch (imageName) {
-    case 'Ash':
-      return AshIcon
-    case 'Clear':
-      return ClearIcon
-    case 'Clouds':
-      return CloudsIcon
-    case 'Drizzle':
-      return DrizzleIcon
-    case 'Dust':
-      return DustIcon
-    case 'Fog':
-      return FogIcon
-    case 'Haze':
-      return HazeIcon
-      case 'Mist':
-      return MistIcon
-    case 'Rain':
-      return RainIcon
-    case 'Sand':
-      return SandIcon
-    case 'Smoke':
-      return SmokeIcon
-    case 'Snow':
-      return SnowIcon
-    case 'Squal':
-      return SquallIcon
-    case 'Thunderstorm':
-      return ThunderstormIcon
-    case 'Tornado':
-      return TornadoIcon
-    default:
-      return sampleIcon
-  }
-}
 export const firstLetterUpperCase = (string: string) => {
   if (!string) return ''
   return string[0].toUpperCase() + string.slice(1)
@@ -97,7 +43,7 @@ export const setWeather = async (lat?: number, lon?: number) => {
         description: `${firstLetterUpperCase(
           weatherData.weather[0].description
         )}`,
-        backgroundUrl: getWidgetBackgroundUrl(weatherData.weather[0].main),
+        backgroundUrl: weatherData.weather[0].main,
         tempMax: `${Math.round(weatherData.main.temp_max)}°`,
         tempMin: `${Math.round(weatherData.main.temp_min)}°`,
       })

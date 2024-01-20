@@ -1,16 +1,69 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useWeatherInfoStore } from '@/store/store.ts'
+import sampleIcon from '@/assets/widget/sample.svg'
+import AshIcon from '@/assets/widget/Ash.jpg'
+import ClearIcon from '@/assets/widget/Clear.jpg'
+import CloudsIcon from '@/assets/widget/Clouds.jpg'
+import DrizzleIcon from '@/assets/widget/Drizzle.jpg'
+import DustIcon from '@/assets/widget/Dust.jpg'
+import FogIcon from '@/assets/widget/Fog.jpg'
+import HazeIcon from '@/assets/widget/Haze.jpg'
+import MistIcon from '@/assets/widget/Mist.jpg'
+import RainIcon from '@/assets/widget/Rain.jpg'
+import SandIcon from '@/assets/widget/Sand.jpg'
+import SmokeIcon from '@/assets/widget/Smoke.jpg'
+import SnowIcon from '@/assets/widget/Snow.jpg'
+import SquallIcon from '@/assets/widget/Squall.jpg'
+import ThunderstormIcon from '@/assets/widget/Thunderstorm.jpg'
+import TornadoIcon from '@/assets/widget/Tornado.jpg'
 
 const weatherInfoStore = useWeatherInfoStore()
 const weatherInfo = ref(weatherInfoStore)
+
+const getWidgetBackgroundUrl = (imageName: string) => {
+  switch (imageName) {
+    case 'Ash':
+      return AshIcon
+    case 'Clear':
+      return ClearIcon
+    case 'Clouds':
+      return CloudsIcon
+    case 'Drizzle':
+      return DrizzleIcon
+    case 'Dust':
+      return DustIcon
+    case 'Fog':
+      return FogIcon
+    case 'Haze':
+      return HazeIcon
+      case 'Mist':
+      return MistIcon
+    case 'Rain':
+      return RainIcon
+    case 'Sand':
+      return SandIcon
+    case 'Smoke':
+      return SmokeIcon
+    case 'Snow':
+      return SnowIcon
+    case 'Squal':
+      return SquallIcon
+    case 'Thunderstorm':
+      return ThunderstormIcon
+    case 'Tornado':
+      return TornadoIcon
+    default:
+      return sampleIcon
+  }
+}
 </script>
 
 <template>
   <div class="widget">
     <img
       draggable="false"
-      :src="weatherInfo.getBackgroundUrl"
+      :src="getWidgetBackgroundUrl(weatherInfo.getBackgroundUrl)"
       alt="Background"
     />
     <div class="backdrop"></div>
