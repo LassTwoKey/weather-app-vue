@@ -37,7 +37,7 @@ const getWidgetBackgroundUrl = (imageName: string) => {
       return FogIcon
     case 'Haze':
       return HazeIcon
-      case 'Mist':
+    case 'Mist':
       return MistIcon
     case 'Rain':
       return RainIcon
