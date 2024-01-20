@@ -53,6 +53,9 @@ const clearSearchHandler = (_:any, isCloseBtn?:boolean, word?:string) => {
 }
 const selectCityHandler = (city: City) => {
   emits('handle-select', city)
+  if (searchInputRef.value) {
+      searchInputRef.value.value = ''
+    }
 }
 </script>
 
