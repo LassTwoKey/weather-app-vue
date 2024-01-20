@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { City } from '../types'
+import { City } from '@/types'
+import searchIcon from '@/assets/search.svg'
+import closeIcon from '@/assets/close.svg'
 
 interface Props {
   citiesList: City[]
@@ -24,8 +26,8 @@ const {
 const emits = defineEmits(['handle-search', 'handle-close', 'handle-select'])
 const searchInputRef = ref<HTMLInputElement | null>(null)
 
-const searchHandler = (event: any) => {
-  const word = event.target.value
+const searchHandler = (event: Event) => {
+  const word = (event.target as HTMLInputElement).value
 
   emits('handle-search', word, isMobile)
 }
@@ -51,10 +53,10 @@ const selectCityHandler = (city: City) => {
         placeholder="Введите город"
       />
       <button v-if="!isOpen" class="search__field_btn">
-        <img class="scale-125" src="../assets/search.svg" alt="Search" />
+        <img class="scale-125" :src="searchIcon" alt="Search" />
       </button>
       <button v-else @click="clearSearchHandler" class="search__field_btn">
-        <img class="scale-150" src="../assets/close.svg" alt="Clear" />
+        <img class="scale-150" :src="closeIcon" alt="Clear" />
       </button>
     </div>
     <div
@@ -113,10 +115,10 @@ const selectCityHandler = (city: City) => {
           placeholder="Введите город"
         />
         <button v-if="!isOpenMobile" class="search__field_btn">
-          <img src="../assets/search.svg" alt="Search" />
+          <img :src="searchIcon" alt="Search" />
         </button>
         <button v-else @click="clearSearchHandler" class="search__field_btn">
-          <img class="scale-150" src="../assets/close.svg" alt="Clear" />
+          <img class="scale-150" :src="closeIcon" alt="Clear" />
         </button>
       </div>
       <div

@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { storeToRefs } from 'pinia'
-import Spoiler from '../UI/Spoiler.vue'
-import { useFiveDaysStore } from '../../store/store.ts'
-import { getFormattedDateForFiveDays } from '../../utils/date.ts'
-import { firstLetterUpperCase } from '../../utils/weatherData.ts'
+import Spoiler from '@/components/UI//Spoiler.vue'
+import { useFiveDaysStore } from '@/store/store.ts'
+import { getFormattedDateForFiveDays } from '@/utils/date.ts'
+import { firstLetterUpperCase } from '@/utils/weatherData.ts'
 
 const fiveDaysStore = useFiveDaysStore()
 const fiveDays = storeToRefs(fiveDaysStore)
@@ -67,5 +67,3 @@ const daysInfo = computed(() =>
     />
   </div>
 </template>
-
-<style scoped lang="scss"></style>

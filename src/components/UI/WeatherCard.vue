@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Card from './Card.vue'
-import { MainCard } from '../../types'
+import Card from '@/components/UI/Card.vue'
+import { MainCard } from '@/types'
 
 interface Props {
   options: MainCard

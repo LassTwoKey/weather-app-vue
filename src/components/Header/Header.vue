@@ -1,19 +1,21 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import InputSearch from './InputSearch.vue'
-import { debounce, setUnit, setGeo } from '../utils'
-import { getCitiesByValue, getFullInfoByCities } from '../api'
-import { City, WeatherInfo } from '../types'
-import { getCountryByCode } from '../utils/getCountry'
-import { useGeoStore, useUnitStore } from '../store/store'
-import { setForecast, setWeather } from '../utils/weatherData'
+import InputSearch from '@/components/InputSearch/InputSearch.vue'
+import searchIcon from '@/assets/search.svg'
+import logoIcon from '@/assets/logo.svg'
+import { debounce, setUnit, setGeo } from '@/utils'
+import { getCitiesByValue, getFullInfoByCities } from '@/api'
+import { City, WeatherInfo } from '@/types'
+import { getCountryByCode } from '@/utils/getCountry'
+import { useGeoStore, useUnitStore } from '@/store/store'
+import { setForecast, setWeather } from '@/utils/weatherData'
 
 const citiesList = ref<City[]>([])
-const isLoading = ref<boolean>(false)
-const resultString = ref<string>('')
-const isError = ref<boolean>(false)
-const searchListOpen = ref<boolean>(false)
-const searchListOpenMobile = ref<boolean>(false)
+const isLoading = ref(false)
+const resultString = ref('')
+const isError = ref(false)
+const searchListOpen = ref(false)
+const searchListOpenMobile = ref(false)
 
 const geoStore = useGeoStore()
 const unitStore = useUnitStore()
@@ -55,7 +57,7 @@ const performSearch = async (word: string) => {
     }
   }
 }
-const debouncedSearch: (arg: string) => void = debounce(performSearch, 500)
+const debouncedSearch: (arg: string) => void = debounce(performSearch, 1000)
 const handleSearch = (word: string, isMobile: boolean) => {
   if (word.trim()) {
     if (isMobile) searchListOpenMobile.value = true
@@ -101,7 +103,7 @@ const selectCityHandler = (city: City) => {
     <div class="app-container header__container">
       <div class="header__left">
         <div class="header__left_logo">
-          <img src="../assets/logo.svg" alt="Logo" />
+          <img :src="logoIcon" alt="Logo" />
           <p>Weather <span class="text-red-500">App</span></p>
         </div>
         <div class="header__left_mobile-search">
@@ -109,7 +111,7 @@ const selectCityHandler = (city: City) => {
             class="header__left_mobile-search_btn app-rounded"
             @click="searchListOpenMobile = true"
           >
-            <img src="../assets/search.svg" alt="Search" />
+            <img :src="searchIcon" alt="Search" />
           </button>
           <InputSearch
             :isMobile="true"

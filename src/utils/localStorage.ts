@@ -1,4 +1,4 @@
-import { Unit, Geo } from '../types'
+import { Unit, Geo } from '@/types'
 
 export function setUnit(unit: Unit) {
   localStorage.setItem('currentUnit', unit)

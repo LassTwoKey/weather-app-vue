@@ -1,22 +1,20 @@
 <script setup lang="ts">
-import Card from './Card.vue'
-import { ForecastItemClient } from '../../types'
-import SwiperComponent from '../SwiperComponent.vue'
+import Card from '@/components/UI/Card.vue'
+import { ForecastItemClient } from '@/types'
+import SwiperComponent from '@/components/SwiperComponent.vue'
+import iconUrl from '@/assets/tabs/timer.svg'
 
 interface Props {
-  iconUrl: string
   title: string
   forecast?: ForecastItemClient[]
 }
 
-const { iconUrl, title, forecast } = defineProps<Props>()
+const { title, forecast } = defineProps<Props>()
 </script>
 
 <template>
   <Card>
     <div class="flex gap-3 mb-3">
-      <!--      <img src="../../assets/tabs/timer.svg" alt="Hourly Forecast">-->
-      <!--      <h2 class="font-medium">Часовой прогноз</h2>-->
       <img :src="iconUrl" alt="Hourly Forecast" />
       <h2 class="font-medium">{{ title }}</h2>
     </div>
@@ -26,5 +24,3 @@ const { iconUrl, title, forecast } = defineProps<Props>()
     ></SwiperComponent>
   </Card>
 </template>
-
-<style scoped lang="scss"></style>

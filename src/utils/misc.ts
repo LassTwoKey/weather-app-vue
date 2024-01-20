@@ -1,4 +1,4 @@
-import { useUnitStore } from '../store/store'
+import { useUnitStore } from '@/store/store'
 
 export function getWindDirection(degrees: number) {
   const directions = [

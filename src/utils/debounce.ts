@@ -1,5 +1,5 @@
 export function debounce(func: (...arg: any[]) => any, delay: number) {
-  let timeoutId: number
+  let timeoutId: NodeJS.Timeout
 
   return function (this: any) {
     const context = this

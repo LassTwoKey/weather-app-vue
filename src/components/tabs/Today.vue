@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
-import WeatherCard from '../UI/WeatherCard.vue'
-import { useTodayStore } from '../../store/store.ts'
-import NamedCard from '../UI/NamedCard.vue'
+import WeatherCard from '@/components/UI/WeatherCard.vue'
+import { useTodayStore } from '@/store/store.ts'
+import NamedCard from '@/components/UI/NamedCard.vue'
 
 const todayStore = useTodayStore()
 const today = storeToRefs(todayStore)
@@ -21,11 +21,7 @@ const forecastList = today.getForecast
     />
   </div>
   <div class="mb-4 md:mb-5">
-    <NamedCard
-      iconUrl="src/assets/tabs/timer.svg"
-      title="Часовой прогноз"
-      :forecast="forecastList"
-    />
+    <NamedCard title="Часовой прогноз" :forecast="forecastList" />
   </div>
   <div class="grid gap-4 md:gap-5 grid-cols-2">
     <WeatherCard

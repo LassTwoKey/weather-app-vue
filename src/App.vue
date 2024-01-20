@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import AppLoader from './components/AppLoader.vue'
-import Header from './components/Header.vue'
-import Widget from './components/Widget.vue'
-import Tabs from './components/tabs/Tabs.vue'
-import Footer from './components/Footer.vue'
-import { setForecast, setWeather } from './utils/weatherData'
-const isStartLoading = ref<boolean>(true)
+import AppLoader from '@/components/AppLoader.vue'
+import Header from '@/components/Header/Header.vue'
+import Widget from '@/components/Widget.vue'
+import Tabs from '@/components/tabs/Tabs.vue'
+import Footer from '@/components/Footer.vue'
+import { setForecast, setWeather } from '@/utils/weatherData'
+
+const isStartLoading = ref(true)
 const setData = async () => {
   await setWeather()
   await setForecast()
@@ -14,6 +15,7 @@ const setData = async () => {
     isStartLoading.value = false
   }, 500)
 }
+
 setData()
 </script>
 
@@ -32,5 +34,3 @@ setData()
     <Footer />
   </div>
 </template>
-
-<style scoped></style>

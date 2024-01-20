@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import Card from './Card.vue'
-import SwiperComponent from '../SwiperComponent.vue'
-import { ForecastItemClient, MainCard } from '../../types'
-import WeatherCard from './WeatherCard.vue'
+import Card from '@/components/UI/Card.vue'
+import SwiperComponent from '@/components/SwiperComponent.vue'
+import { ForecastItemClient, MainCard } from '@/types'
+import WeatherCard from '@/components/UI/WeatherCard.vue'
 
 interface Props {
   isBorderless?: boolean
   options: {
+    id: number
     date: string
     description: string
     tempMax: string
@@ -18,7 +19,7 @@ interface Props {
   }
 }
 const { options, isBorderless } = defineProps<Props>()
-const isOpen = ref(false)
+const isOpen = ref(options.id === 0)
 </script>
 
 <template>
@@ -72,7 +73,6 @@ const isOpen = ref(false)
 <style scoped lang="scss">
 .v-enter-active,
 .v-leave-active {
-  //transition: all .5s ease;
   height: auto;
   overflow: hidden;
 }

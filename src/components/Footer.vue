@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <div class="bg-white font-medium text-center">
     <div class="app-container py-4">
@@ -8,6 +6,7 @@
         <a
           class="flex items-center gap-1 hover:opacity-80 duration-300 hover:underline"
           href="https://github.com/LassTwoKey"
+          target="_blank"
           rel="author"
         >
           <img src="../assets/github.svg" alt="" />

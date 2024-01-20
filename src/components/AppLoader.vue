@@ -20,7 +20,7 @@ const { isStartLoading } = defineProps<Props>()
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 @import '../style.scss';
 
 .loader {
@@ -55,7 +55,6 @@ const { isStartLoading } = defineProps<Props>()
   width: 24px;
   height: 4px;
   border-radius: 50%;
-  //background: rgba(0, 0, 0, 0.2);
   animation: animShadow 0.4s ease-in-out infinite alternate;
 }
 

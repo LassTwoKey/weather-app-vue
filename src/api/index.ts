@@ -2,7 +2,7 @@ import { useUnitStore } from '../store/store'
 import { CityCoordinates } from '../types'
 import { getUnit } from '../utils'
 
-export const apiKey: string = '09d65a643b54838149fea98b67251c39'
+export const apiKey = '09d65a643b54838149fea98b67251c39'
 
 export async function getWeatherByCity(city: string) {
   const unitStore = useUnitStore()
@@ -26,7 +26,7 @@ export async function getWeatherByCoordinate(lat: number, lon: number) {
 export async function getCitiesByValue(searchValue: string) {
   const unitStore = useUnitStore()
   const response = fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${searchValue}&limit=5&units=${
+    `https://api.openweathermap.org/geo/1.0/direct?q=${searchValue}&limit=5&units=${
       getUnit() ?? unitStore.getUnit
     }&appid=${apiKey}`
   )

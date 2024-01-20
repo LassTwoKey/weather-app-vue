@@ -1,5 +1,5 @@
-import { ForecastInfo, WeatherInfo } from '../types'
-import { getForecastByCoordinate, getWeatherByCoordinate } from '../api'
+import { ForecastInfo, WeatherInfo } from '@/types'
+import { getForecastByCoordinate, getWeatherByCoordinate } from '@/api'
 import { getCountryByCode } from './getCountry'
 import {
   useWeatherInfoStore,
@@ -8,7 +8,7 @@ import {
   useTodayStore,
   useTomorrowStore,
   useFiveDaysStore,
-} from '../store/store.ts'
+} from '@/store/store.ts'
 import {
   getWindDirection,
   getWindString,
@@ -16,7 +16,16 @@ import {
   splitIntoSubArrays,
 } from './misc.ts'
 import { formatTime, formatUnixTimeTo24HourTimeString } from './date.ts'
+import widgetBackgroundUrl from '@/assets/widget/sample.svg'
 
+export const getWidgetBackgroundUrl = (imageName: string) => {
+  const widgetUrl = widgetBackgroundUrl.substring(
+    0,
+    widgetBackgroundUrl.lastIndexOf('/')
+  )
+
+  return `${widgetUrl}/${imageName}.jpg`
+}
 export const firstLetterUpperCase = (string: string) => {
   if (!string) return ''
   return string[0].toUpperCase() + string.slice(1)
@@ -43,7 +52,7 @@ export const setWeather = async (lat?: number, lon?: number) => {
         description: `${firstLetterUpperCase(
           weatherData.weather[0].description
         )}`,
-        backgroundUrl: `src/assets/widget/${weatherData.weather[0].main}.jpg`,
+        backgroundUrl: getWidgetBackgroundUrl(weatherData.weather[0].main),
         tempMax: `${Math.round(weatherData.main.temp_max)}°`,
         tempMin: `${Math.round(weatherData.main.temp_min)}°`,
       })
