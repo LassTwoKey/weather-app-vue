@@ -32,15 +32,15 @@ const isOpen = ref(options.id === 0)
         <span class="text-gray-800 text-sm md:text-base">{{ options.date }}</span>
         <span class="text-gray-400 text-xs md:text-base">{{ options.description }}</span>
       </span>
-      <span class="flex gap-3">
+      <span class="flex gap-1 md:gap-3">
         <span class="divide-x">
-          <span class="flex flex-col text-right">
+          <span class="flex flex-col text-right text-sm md:text-base">
             <span>{{ options.tempMax }}</span>
             <span>{{ options.tempMin }}</span>
           </span>
         </span>
         <img
-          class="h-14 select-none pointer-events-none"
+          class="h-10 md:h-14 select-none pointer-events-none"
           :src="options.iconUrl"
           alt=""
         />

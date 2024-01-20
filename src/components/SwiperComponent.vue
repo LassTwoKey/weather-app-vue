@@ -14,7 +14,7 @@ const { forecastList } = defineProps<Props>()
   <Swiper v-if="forecastList.length" slides-per-view="auto" :space-between="23">
     <SwiperSlide v-for="forecastItem of forecastList" :key="forecastItem.id">
       <div
-        class="text-center flex flex-col text-gray-700 justify-center font-medium"
+        class="text-center flex flex-col text-gray-700 justify-center font-medium text-sm md:text-base"
       >
         <h4>{{ forecastItem.time }}</h4>
         <img

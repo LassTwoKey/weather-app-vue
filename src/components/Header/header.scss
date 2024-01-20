@@ -6,7 +6,7 @@
   &__left {
     @apply flex gap-2 items-center;
     &_logo {
-      @apply flex items-center gap-2 text-2xl text-gray-800 font-bold;
+      @apply flex items-center gap-2 text-xl md:text-2xl text-gray-800 font-bold;
     }
     &_mobile-search {
       @apply md:hidden;

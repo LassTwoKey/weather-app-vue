@@ -94,7 +94,7 @@ const getWidgetBackgroundUrl = (imageName: string) => {
 
 <style scoped lang="scss">
 .widget {
-  @apply relative w-full md:rounded-2xl rounded-b-2xl overflow-hidden p-4 md:p-5 text-white font-medium min-h-80 flex flex-col;
+  @apply relative w-full text-sm md:text-base md:rounded-2xl rounded-b-2xl overflow-hidden p-4 md:p-5 text-white font-medium min-h-80 flex flex-col;
   & > img {
     @apply absolute inset-0 w-full h-full bg-cover object-cover bg-center;
   }
