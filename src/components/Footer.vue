@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white font-medium text-center">
     <div class="app-container py-4">
-      <div class="flex gap-3 justify-center">
+      <div class="flex gap-3 justify-center text-sm md:text-base">
         <span class="text-gray-500">Разработал</span>
         <a
           class="flex items-center gap-1 hover:opacity-80 duration-300 hover:underline"

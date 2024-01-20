@@ -31,7 +31,20 @@ const searchHandler = (event: Event) => {
 
   emits('handle-search', word, isMobile)
 }
-const clearSearchHandler = () => {
+const clearSearchHandler = (_:any, isCloseBtn?:boolean, word?:string) => {
+  if (word) {
+    if (searchInputRef.value) {
+      searchInputRef.value.value = ''
+    }
+    emits('handle-close', isMobile, true)
+    return undefined
+  }
+
+  if (!(document.body.offsetWidth > 768) && !isCloseBtn) {
+    return undefined
+  }
+  
+
   if (searchInputRef.value) {
     searchInputRef.value.value = ''
   }
@@ -45,7 +58,10 @@ const selectCityHandler = (city: City) => {
 
 <template>
   <div v-if="!isMobile" class="search" v-click-outside="clearSearchHandler">
-    <div class="search__field app-rounded">
+    <div class="search__field" :class="{
+        'app-rounded': !isOpen,
+        'rounded-t-lg': isOpen,
+      }">
       <input
         type="text"
         ref="searchInputRef"
@@ -117,7 +133,7 @@ const selectCityHandler = (city: City) => {
         <button v-if="!isOpenMobile" class="search__field_btn">
           <img :src="searchIcon" alt="Search" />
         </button>
-        <button v-else @click="clearSearchHandler" class="search__field_btn">
+        <button v-else @click="clearSearchHandler($event, true, searchInputRef?.value)" class="search__field_btn">
           <img class="scale-150" :src="closeIcon" alt="Clear" />
         </button>
       </div>

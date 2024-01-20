@@ -14,9 +14,9 @@ const { title, forecast } = defineProps<Props>()
 
 <template>
   <Card>
-    <div class="flex gap-3 mb-3">
+    <div class="flex items-center gap-3 mb-3">
       <img :src="iconUrl" alt="Hourly Forecast" />
-      <h2 class="font-medium">{{ title }}</h2>
+      <h2 class="font-medium text-sm md:text-base">{{ title }}</h2>
     </div>
     <SwiperComponent
       v-if="forecast"

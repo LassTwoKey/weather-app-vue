@@ -29,8 +29,8 @@ const isOpen = ref(options.id === 0)
       @click="isOpen = !isOpen"
     >
       <span class="flex flex-col text-left">
-        <span class="text-gray-800">{{ options.date }}</span>
-        <span class="text-gray-400">{{ options.description }}</span>
+        <span class="text-gray-800 text-sm md:text-base">{{ options.date }}</span>
+        <span class="text-gray-400 text-xs md:text-base">{{ options.description }}</span>
       </span>
       <span class="flex gap-3">
         <span class="divide-x">

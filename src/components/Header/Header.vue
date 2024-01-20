@@ -59,6 +59,13 @@ const performSearch = async (word: string) => {
 }
 const debouncedSearch: (arg: string) => void = debounce(performSearch, 1000)
 const handleSearch = (word: string, isMobile: boolean) => {
+  if (isMobile && !word.trim()) {
+    citiesList.value = []
+    isError.value = false
+    resultString.value = ''
+
+    return undefined
+  }
   if (word.trim()) {
     if (isMobile) searchListOpenMobile.value = true
     else searchListOpen.value = true
@@ -66,16 +73,16 @@ const handleSearch = (word: string, isMobile: boolean) => {
     isLoading.value = true
     debouncedSearch(word)
   } else {
-    if (isMobile) searchListOpenMobile.value = false
-    else searchListOpen.value = false
-
+    searchListOpen.value = false
     isLoading.value = false
   }
 }
-const handleClose = (isMobile: boolean) => {
+const handleClose = (isMobile: boolean, withoutClose?: boolean) => {
   resultString.value = ''
   citiesList.value = []
   isError.value = false
+
+  if (withoutClose) return undefined
 
   if (isMobile) searchListOpenMobile.value = false
   else searchListOpen.value = false
