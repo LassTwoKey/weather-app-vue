@@ -8,6 +8,7 @@ import {
   useTodayStore,
   useTomorrowStore,
   useFiveDaysStore,
+  useUnitStore,
 } from '@/store/store.ts'
 import {
   getWindDirection,
@@ -25,6 +26,7 @@ export const setWeather = async (lat?: number, lon?: number) => {
   const weatherInfoStore = useWeatherInfoStore()
   const todayStore = useTodayStore()
   const geoStore = useGeoStore()
+  const unitStore = useUnitStore()
 
   if (!isNaN(+geoStore.getLat) && !isNaN(+geoStore.getLon)) {
     const weatherData: WeatherInfo | null = await getWeatherByCoordinate(
@@ -37,7 +39,9 @@ export const setWeather = async (lat?: number, lon?: number) => {
         geoName: `${weatherData.name}, ${getCountryByCode(
           weatherData.sys.country
         )}`,
-        temp: `${Math.round(weatherData.main.temp)}°`,
+        temp: `${Math.round(weatherData.main.temp)}${
+          unitStore.getUnit === 'metric' ? '°C' : '°F'
+        }`,
         feelsLike: `${Math.round(weatherData.main.feels_like)}°`,
         iconUrl: `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`,
         description: `${firstLetterUpperCase(

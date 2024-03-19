@@ -43,7 +43,9 @@ const performSearch = async (word: string) => {
         lat: city.coord.lat,
         lon: city.coord.lon,
         title: `${city.name}, ${getCountryByCode(city.sys.country)}`,
-        temp: `${Math.round(city.main.temp)} °C`,
+        temp: `${Math.round(city.main.temp)} ${
+          unitStore.getUnit === 'metric' ? '°C' : '°F'
+        }`,
         weatherIconUrl: `https://openweathermap.org/img/wn/${city.weather[0].icon}@2x.png`,
       }))
       isLoading.value = false

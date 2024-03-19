@@ -111,7 +111,7 @@ const getWidgetBackgroundUrl = (imageName: string) => {
     @apply flex items-end justify-between gap-4;
   }
   &__temp {
-    @apply flex items-end flex-wrap gap-1;
+    @apply flex items-end flex-wrap gap-x-2 gap-y-1;
   }
   &__degree {
     @apply text-6xl md:text-7xl;
