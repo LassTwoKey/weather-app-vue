@@ -22,8 +22,9 @@ const tabs = shallowRef([
     component: FiveDays,
   },
 ])
-const computedContent = computed(() =>
-  tabs.value.find((tab) => tab.id === activeTab.value)
+
+const activeTabComponent = computed(
+  () => tabs.value.find((tab) => tab.id === activeTab.value)?.component
 )
 </script>
 
@@ -35,16 +36,15 @@ const computedContent = computed(() =>
         :key="tab.id"
         @click="activeTab = tab.id"
         class="app-rounded"
-        :class="[activeTab === tab.id ? 'active' : '']"
+        :class="[activeTab === tab.id && 'active']"
       >
         {{ tab.title }}
       </button>
     </div>
     <div class="tabs__content">
-      <component
-        v-if="computedContent?.component"
-        :is="computedContent.component"
-      ></component>
+      <keep-alive>
+        <component :is="activeTabComponent"></component>
+      </keep-alive>
     </div>
   </div>
 </template>

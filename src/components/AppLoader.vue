@@ -21,7 +21,7 @@ const { isStartLoading } = defineProps<Props>()
 </template>
 
 <style scoped lang="scss">
-@import '../style.scss';
+@import '../assets/styles/style.scss';
 
 .loader {
   width: 48px;

@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import '@/style.scss'
+import '@/assets/styles/style.scss'
 import App from '@/App.vue'
 import ClickOutsideDirective from '@/directives/ClickOutsideDirective.ts'
 

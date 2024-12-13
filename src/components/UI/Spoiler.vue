@@ -15,7 +15,7 @@ interface Props {
     tempMin: string
     iconUrl: string
     forecast: ForecastItemClient[]
-    mainCards: MainCard[] | any[]
+    mainCards: MainCard[]
   }
 }
 const { options, isBorderless } = defineProps<Props>()
