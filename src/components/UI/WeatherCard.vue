@@ -19,7 +19,7 @@ const { options, isBorderless } = defineProps<Props>()
     />
     <div class="font-medium">
       <h3 class="text-gray-800 text-sm md:text-base">{{ options.title }}</h3>
-      <p class="text-gray-400 text-xs md:text-base">
+      <p :class="['text-gray-400 text-xs md:text-base']">
         {{ options.value }}
         <span v-if="options.descr" class="text-red-400">{{
           options.descr

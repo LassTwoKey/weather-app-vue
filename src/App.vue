@@ -21,7 +21,7 @@ setData()
 
 <template>
   <AppLoader :is-start-loading="isStartLoading" />
-  <div class="h-full flex flex-col">
+  <div v-if="!isStartLoading" class="h-full flex flex-col">
     <Header />
     <main class="container flex-auto mx-auto md:px-3 py-4 md:py-7">
       <div class="md:max-w-lg">

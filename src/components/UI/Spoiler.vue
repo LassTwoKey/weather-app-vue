@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import Card from '@/components/UI/Card.vue'
 import SwiperComponent from '@/components/SwiperComponent.vue'
 import { ForecastItemClient, MainCard } from '@/types'
 import WeatherCard from '@/components/UI/WeatherCard.vue'
+import { useAnimateElems } from '@/composables'
 
 interface Props {
   isBorderless?: boolean
@@ -20,10 +21,14 @@ interface Props {
 }
 const { options, isBorderless } = defineProps<Props>()
 const isOpen = ref(options.id === 0)
+
+const spoilerId = computed(() => `spoiler_${options.id}`)
+
+useAnimateElems(`#${spoilerId.value} .changed-foreacast-value`, {})
 </script>
 
 <template>
-  <Card class="p-0">
+  <Card :id="spoilerId" class="p-0">
     <button
       class="w-full flex justify-between font-medium"
       @click="isOpen = !isOpen"
@@ -39,8 +44,8 @@ const isOpen = ref(options.id === 0)
       <span class="flex gap-1 md:gap-3">
         <span class="divide-x">
           <span class="flex flex-col text-right text-sm md:text-base">
-            <span>{{ options.tempMax }}</span>
-            <span>{{ options.tempMin }}</span>
+            <span class="changed-foreacast-value">{{ options.tempMax }}</span>
+            <span class="changed-foreacast-value">{{ options.tempMin }}</span>
           </span>
         </span>
         <img
@@ -68,7 +73,10 @@ const isOpen = ref(options.id === 0)
             :options="mainCard"
           />
         </div>
-        <SwiperComponent :forecast-list="options.forecast"></SwiperComponent>
+        <SwiperComponent
+          :swiper-id="spoilerId"
+          :forecast-list="options.forecast"
+        ></SwiperComponent>
       </div>
     </Transition>
   </Card>

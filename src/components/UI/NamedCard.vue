@@ -6,10 +6,11 @@ import iconUrl from '@/assets/tabs/timer.svg'
 
 interface Props {
   title: string
+  swiperId?: string
   forecast?: ForecastItemClient[]
 }
 
-const { title, forecast } = defineProps<Props>()
+const { title, forecast, swiperId } = defineProps<Props>()
 </script>
 
 <template>
@@ -20,6 +21,7 @@ const { title, forecast } = defineProps<Props>()
     </div>
     <SwiperComponent
       v-if="forecast"
+      :swiper-id="swiperId"
       :forecast-list="forecast"
     ></SwiperComponent>
   </Card>

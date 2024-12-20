@@ -17,6 +17,7 @@ import SnowIcon from '@/assets/widget/Snow.jpg'
 import SquallIcon from '@/assets/widget/Squall.jpg'
 import ThunderstormIcon from '@/assets/widget/Thunderstorm.jpg'
 import TornadoIcon from '@/assets/widget/Tornado.jpg'
+import { useAnimateElems } from '@/composables'
 
 const weatherInfoStore = useWeatherInfoStore()
 const weatherInfo = ref(weatherInfoStore)
@@ -57,10 +58,12 @@ const getWidgetBackgroundUrl = (imageName: string) => {
       return sampleIcon
   }
 }
+
+useAnimateElems('#widget .changed-value', {})
 </script>
 
 <template>
-  <div class="widget">
+  <div id="widget" class="widget">
     <img
       draggable="false"
       :src="getWidgetBackgroundUrl(weatherInfo.getBackgroundUrl)"
@@ -68,24 +71,31 @@ const getWidgetBackgroundUrl = (imageName: string) => {
     />
     <div class="backdrop"></div>
     <div class="widget__container">
-      <h1 class="widget__header">{{ weatherInfo.getGeoName }}</h1>
+      <h1 class="widget__header changed-value">{{ weatherInfo.getGeoName }}</h1>
       <div class="widget__main">
         <div class="widget__temp">
-          <div class="widget__degree">{{ weatherInfo.getTemp }}</div>
+          <div class="widget__degree changed-value">
+            {{ weatherInfo.getTemp }}
+          </div>
           <div class="widget__feels-like">
-            <p id="feels-like">Ощущается {{ weatherInfo.getFeelsLike }}</p>
+            <p id="feels-like">
+              Ощущается
+              <span class="changed-value">{{ weatherInfo.getFeelsLike }}</span>
+            </p>
           </div>
         </div>
         <div class="widget__weather-icon">
           <img draggable="false" :src="weatherInfo.getIconUrl" alt="Icon" />
-          <p>{{ weatherInfo.getDescription }}</p>
+          <p class="changed-value">{{ weatherInfo.getDescription }}</p>
         </div>
       </div>
       <div class="widget__footer">
-        <div class="widget__date">{{ weatherInfo.getCurrentDate }}</div>
+        <div class="widget__date changed-value">
+          {{ weatherInfo.getCurrentDate }}
+        </div>
         <div class="widget__temps">
-          <p>Макс {{ weatherInfo.getTempMax }}</p>
-          <p>Мин {{ weatherInfo.getTempMin }}</p>
+          <p class="changed-value">Макс {{ weatherInfo.getTempMax }}</p>
+          <p class="changed-value">Мин {{ weatherInfo.getTempMin }}</p>
         </div>
       </div>
     </div>

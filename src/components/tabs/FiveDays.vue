@@ -5,6 +5,7 @@ import Spoiler from '@/components/UI//Spoiler.vue'
 import { useFiveDaysStore } from '@/store/store.ts'
 import { getFormattedDateForFiveDays } from '@/utils/date.ts'
 import { firstLetterUpperCase } from '@/utils/weatherData.ts'
+import { useAnimateTabContent } from '@/composables'
 
 const fiveDaysStore = useFiveDaysStore()
 const fiveDays = storeToRefs(fiveDaysStore)
@@ -55,6 +56,8 @@ const daysInfo = computed(() =>
     }
   })
 )
+
+useAnimateTabContent('.animate-box', {})
 </script>
 
 <template>
@@ -62,6 +65,7 @@ const daysInfo = computed(() =>
     <Spoiler
       v-for="dayInfo of daysInfo"
       :key="dayInfo.id"
+      class="animate-box"
       :options="dayInfo"
       is-borderless
     />

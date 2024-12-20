@@ -42,9 +42,7 @@ const activeTabComponent = computed(
       </button>
     </div>
     <div class="tabs__content">
-      <keep-alive>
-        <component :is="activeTabComponent"></component>
-      </keep-alive>
+      <component :is="activeTabComponent"></component>
     </div>
   </div>
 </template>
