@@ -8,6 +8,11 @@ input,
 textarea {
   outline: none;
 }
+
+html {
+  scrollbar-gutter: stable;
+}
+
 html,
 body {
   height: 100%;
